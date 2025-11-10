@@ -1,0 +1,28 @@
+{
+    "name": "tdd",
+    "version": "1.0.0",
+    "description": "TDD 방식으로 개발된 수학 유틸리티 라이브러리",
+    "type": "module",
+    "main": "src/index.js",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "files": [
+        "src/"
+    ],
+    "scripts": {
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    },
+    "keywords": [
+        "tdd",
+        "add",
+        "subtract",
+        "math",
+        "utility"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^30.2.0"
+    }
+}
