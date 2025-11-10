@@ -1,4 +1,4 @@
-import { subtract } from '../src/subtract.js';
+import { subtract } from '../src/math/subtract.js';
 
 describe('subtract 함수 테스트', () => {
     test('두 양수를 빼면 올바른 결과를 반환한다', () => {

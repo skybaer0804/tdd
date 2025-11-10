@@ -1,4 +1,4 @@
-import { divide } from '../src/divide.js';
+import { divide } from '../src/math/divide.js';
 
 describe('divide 함수 테스트', () => {
     test('두 양수를 나누면 올바른 결과를 반환한다', () => {

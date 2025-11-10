@@ -1,4 +1,4 @@
-import { add } from '../src/add.js';
+import { add } from '../src/math/add.js';
 
 describe('add 함수 테스트', () => {
     test('두 양수를 더하면 올바른 결과를 반환한다', () => {

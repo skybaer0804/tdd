@@ -7,3 +7,5 @@
 export function divide(dividend, divisor) {
     return dividend / divisor;
 }
+
+export default divide;

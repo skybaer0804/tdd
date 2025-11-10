@@ -1,4 +1,4 @@
-import { pow } from '../src/pow.js';
+import { pow } from '../src/math/pow.js';
 
 describe('pow 함수 테스트', () => {
     test('양수의 거듭제곱을 계산한다', () => {
