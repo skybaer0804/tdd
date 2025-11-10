@@ -1,5 +1,5 @@
 {
-    "name": "tdd",
+    "name": "@skybaer0804/tdd-math",
     "version": "1.0.2",
     "description": "TDD 방식으로 개발된 수학 유틸리티 라이브러리",
     "type": "module",
@@ -22,11 +22,23 @@
         "tdd",
         "add",
         "subtract",
+        "pow",
+        "divide",
         "math",
-        "utility"
+        "utility",
+        "mathematics",
+        "calculator"
     ],
-    "author": "",
+    "author": "Nodejs <nodejs1234@naver.com>",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skybaer0804/tdd"
+    },
+    "homepage": "https://github.com/skybaer0804/tdd#readme",
+    "bugs": {
+        "url": "https://github.com/skybaer0804/tdd/issues"
+    },
     "devDependencies": {
         "jest": "^30.2.0"
     }
