@@ -1,0 +1,11 @@
+# 테스트 파일 제외
+tests/
+*.test.js
+
+# 개발 도구 제외
+jest.config.js
+.gitignore
+.cursorrules
+
+# 개발 의존성은 자동으로 제외됨 (devDependencies)
+
