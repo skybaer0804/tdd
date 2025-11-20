@@ -8,7 +8,8 @@ describe('percent 함수 테스트', () => {
     });
 
     test('소수점이 있는 백분율을 계산한다', () => {
-        expect(percent(1, 3)).toBeCloseTo(33.333333333333336);
+        expect(percent(1, 3)).toBe(33.3); // decimals 기본값 1 적용
+        expect(percent(1, 3, 10)).toBeCloseTo(33.3333333333); // 소수점 10자리로 확인
         expect(percent(1, 4)).toBe(25);
         expect(percent(1, 8)).toBe(12.5);
     });
@@ -68,5 +69,44 @@ describe('percent 함수 테스트', () => {
         expect(percent(0.5, 1)).toBe(50);
         expect(percent(1.5, 3)).toBe(50);
         expect(percent(2.5, 5)).toBe(50);
+    });
+
+    test('decimals 파라미터로 소수점 자릿수를 제어한다', () => {
+        expect(percent(1, 3, 0)).toBe(33);
+        expect(percent(1, 3, 1)).toBe(33.3);
+        expect(percent(1, 3, 2)).toBe(33.33);
+        expect(percent(1, 3, 3)).toBe(33.333);
+        expect(percent(1, 4, 0)).toBe(25);
+        expect(percent(1, 4, 2)).toBe(25);
+    });
+
+    test('mode 파라미터로 반올림 방식을 제어한다', () => {
+        // round 모드 (기본값)
+        expect(percent(1, 3, 1, 'round')).toBe(33.3);
+        expect(percent(1, 3, 2, 'round')).toBe(33.33);
+
+        // floor 모드 (내림)
+        expect(percent(1, 3, 1, 'floor')).toBe(33.3);
+        expect(percent(1, 3, 2, 'floor')).toBe(33.33);
+
+        // ceil 모드 (올림)
+        expect(percent(1, 3, 1, 'ceil')).toBe(33.4);
+        expect(percent(1, 3, 2, 'ceil')).toBe(33.34);
+    });
+
+    test('decimals와 mode를 함께 사용한다', () => {
+        expect(percent(1, 3, 0, 'round')).toBe(33);
+        expect(percent(1, 3, 0, 'floor')).toBe(33);
+        expect(percent(1, 3, 0, 'ceil')).toBe(34);
+
+        expect(percent(2, 3, 1, 'round')).toBe(66.7);
+        expect(percent(2, 3, 1, 'floor')).toBe(66.6);
+        expect(percent(2, 3, 1, 'ceil')).toBe(66.7);
+    });
+
+    test('Infinity와 NaN을 올바르게 처리한다', () => {
+        expect(percent(Infinity, 100)).toBe(Infinity);
+        expect(percent(100, Infinity)).toBeNaN();
+        expect(percent(Infinity, Infinity)).toBeNaN();
     });
 });
