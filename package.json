@@ -1,6 +1,6 @@
 {
     "name": "@skybaer0804/tdd",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "TDD 방식으로 개발된 유틸리티 라이브러리",
     "type": "module",
     "main": "./src/index.js",
@@ -25,6 +25,11 @@
             "import": "./src/format/index.js",
             "require": "./src/format/index.js",
             "default": "./src/format/index.js"
+        },
+        "./markdown": {
+            "import": "./src/markdown/MarkdownLogic.js",
+            "require": "./src/markdown/MarkdownLogic.js",
+            "default": "./src/markdown/MarkdownLogic.js"
         }
     },
     "files": [
