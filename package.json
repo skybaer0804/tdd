@@ -58,6 +58,7 @@
         "jest": "^30.2.0"
     },
     "dependencies": {
-        "date-fns-tz": "^3.2.0"
+        "date-fns-tz": "^3.2.0",
+        "marked": "^11.1.1"
     }
 }
