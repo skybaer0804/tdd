@@ -1,6 +1,6 @@
 {
     "name": "@skybaer0804/tdd",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "description": "TDD 방식으로 개발된 유틸리티 라이브러리",
     "type": "module",
     "main": "./src/index.js",
@@ -30,6 +30,11 @@
             "import": "./src/markdown/MarkdownLogic.js",
             "require": "./src/markdown/MarkdownLogic.js",
             "default": "./src/markdown/MarkdownLogic.js"
+        },
+        "./notification": {
+            "import": "./src/notification/index.js",
+            "require": "./src/notification/index.js",
+            "default": "./src/notification/index.js"
         }
     },
     "files": [
@@ -59,11 +64,13 @@
     "bugs": {
         "url": "https://github.com/skybaer0804/tdd/issues"
     },
-    "devDependencies": {
-        "jest": "^30.2.0"
-    },
     "dependencies": {
         "date-fns-tz": "^3.2.0",
         "marked": "^11.1.1"
+    },
+    "devDependencies": {
+        "jest": "^30.2.0",
+        "jest-environment-jsdom": "^30.2.0",
+        "babel-jest": "^30.2.0"
     }
 }
